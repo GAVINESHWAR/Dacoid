@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+ <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="max-w-xs w-full p-6 bg-white rounded-lg shadow-md">
+        <h2 class="text-2xl font-semibold text-center mb-6">Login</h2>
+        <form>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                <input type="password" id="password" name="password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-blue-500" placeholder="Enter your password">
+            </div>
+            <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"><a href="/page1.html">Login</a></button>
+        </form>
+        <div class="mt-4 flex justify-between items-center">
+            <div class="w-1/2 border-b-2"></div>
+            <div class="text-sm text-gray-500">or</div>
+            <div class="w-1/2 border-b-2"></div>
+        </div>
+        <div class="mt-4 flex justify-between ">
+            <button class="w-1/2 bg-red-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-700 focus:outline-none focus:bg-red-700">Facebook</button>
+            <button class="w-1/2 bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:bg-blue-700">Google</button>
+        </div>
+        <div class="font-thin" style="font-size: small; font-weight: 600;">
+               <p>Don't have account? yet <a href="/index.html"> <span class="text-cyan-950" style="color: blue;">create an account</span></a></p> 
+        </div>
+    </div>
+</body>
+</html>

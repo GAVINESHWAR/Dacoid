@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+  </style>
+  <body class="bg-gray-100 flex flex-col justify-center items-center h-screen">
+    <div
+      class="container max-w-xs w-full p-6 bg-white rounded-lg shadow-md m-0"
+    >
+      <div class="flex flex-auto justify-start">
+        <a href="/Workout.html"><svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 19l-7-7 7-7"
+          />
+        </svg></a>
+        <h1 class="text-right font-semibold pl-11">Workout Tracker</h1>
+      </div>
+      <img src="/fit.png">
+      <div class="fill-teal-300 p-1 flex flex-auto font-thin bg-blue-200 mb-2 mt-2 rounded-sm" style="border: 1px solid yellow;">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561739.png" class="w-6 mr-1">
+        <p>you're burned fewer calories than yesterday.Time to get moving </p>
+      </div>
+      <!-- upcomming workouts -->
+      <div class="flex justify-around m-0 p-0">
+          <h6 class="font-bold text-sm">Upcoming workouts</h6>
+          <p class="text-sm">see more </p>
+      </div>
+        <!-- work labels -->
+
+      <div class="flex justify-between bg-slate-300 rounded-md p-1 mt-2 mb-2" style="border: 2px solid yellowgreen;">
+        <img src="https://img.freepik.com/premium-vector/running-stress-reduction-icon-cartoon-vector-body-skills-loud-body_98402-83584.jpg" class="w-12">
+        <p class="font-medium text-sm">Full body work out</p>
+        <p>Today 3pm</p>
+       <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+</div>
+
+<!-- 2 -->
+<div class="flex justify-between bg-slate-300 rounded-md p-1 mt-2 mb-2" style="border: 2px solid yellowgreen;">
+        <img src="https://is2-ssl.mzstatic.com/image/thumb/Purple127/v4/6b/c8/99/6bc89927-af95-0c43-1d25-67583bcdc0bc/pr_source.png/256x256bb.jpg" class="w-12 rounded-md">
+        <p class="font-medium text-sm">upper body work out</p>
+        <p>13 april 4:30pm</p>
+       <label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+      </div>
+      <div
+        class="w-auto bg-gray-900 h-16 flex justify-around items-center text-white"
+      >
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M3 18v-6a2 2 0 012-2h3l3 6h4l3-9h3a2 2 0 012 2v6"
+            ></path>
+          </svg>
+          <span class="text-xs">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"
+            ></path>
+          </svg>
+          <span class="text-xs">Tracking</span>
+        </a>
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5z"
+            ></path>
+          </svg>
+          <span class="text-xs">Search</span>
+        </a>
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5z"
+            ></path>
+          </svg>
+          <span class="text-xs">Camera</span>
+        </a>
+        <a href="#" class="flex flex-col items-center">
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 14l9-5-9-5-9 5 9 5z"
+            ></path>
+          </svg>
+          <span class="text-xs">User</span>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
